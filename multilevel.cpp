@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
-class student {
+class student 
+{
     int roll;
     char name[30];
 public:
@@ -16,7 +17,8 @@ public:
         cout << "Student name: " << name << endl;
     }
 };
-class studentexam : public student {
+class studentexam : public student 
+{
 public:
     int sub1, sub2, sub3, sub4, sub5, sub6;
     void acceptdata() {
@@ -55,7 +57,8 @@ public:
         cout << "Total Percentage: " << per << "%" << endl;
     }
 };
-int main() {
+int main() 
+{
     int cnt;
     cout << "Enter number of students: ";
     cin >> cnt;

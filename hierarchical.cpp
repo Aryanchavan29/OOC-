@@ -58,7 +58,6 @@ public:
         cout << "Enter total marks: ";
         cin >> marks;
     }
-    
     void displayresult()
     {
         cout << "\n--- Student Result ---\n";
