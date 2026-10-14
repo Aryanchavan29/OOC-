@@ -1,23 +1,34 @@
 #include<iostream>
 using namespace std;
-
-class Complex { 
-    public:
-int real, imag;
-
-Complex(int r, int i){
-real =r;
-imag=i;
+class Complex {
+public:
+int real;
+int imaginary;
+Complex() {
+real=0;
+imaginary=0;
 }
-
-Complex operator+(const Complex& obj){
-    return Complex(real+obj.real, imag+obj.imag);
+Complex(int r, int i) {
+real=r;
+imaginary=i;
+}
+Complex addComplexnumber(Complex C1, Complex C2){
+Complex res;
+res.real=C1.real+C2.real;
+res.imaginary=C1.imaginary+C2.imaginary;
+return res;
 }
 };
-
 int main() {
-Complex c1(10, 5), c2(2, 4);
-Complex c3=c1+c2;
-cout<<c3.real<<"+"<<c3.imag<<"i"<<endl;
+Complex C1(4,5);
+cout<<"Complex Number 1"<<C1.real<<"+ i"<<C1.imaginary<<endl;
+
+Complex C2(7,9);
+cout<<"Complex Number 2"<<C2.real<<"+ i"<<C2.imaginary<<endl;
+
+Complex C3;
+C3.addComplexnumber(C1,C2);
+cout<<"Sum :"<<C3.real<<"+ i"<<C3.imaginary<<endl;
+
 return 0;
 }
